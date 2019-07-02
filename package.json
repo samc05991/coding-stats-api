@@ -1,0 +1,30 @@
+{
+  "name": "udemy-nodejs-angular2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "~1.18.3",
+    "cookie-parser": "~1.4.3",
+    "core-js": "^2.5.7",
+    "debug": "~4.1.0",
+    "express": "~4.16.4",
+    "hbs": "^4.0.2",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.2",
+    "mongoose-unique-validator": "^2.0.2",
+    "morgan": "~1.9.1",
+    "reflect-metadata": "^0.1.12",
+    "serve-favicon": "~2.5.0",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "del-cli": "^1.1.0"
+  },
+  "engines": {
+    "node": "10.15.3"
+  }
+}
