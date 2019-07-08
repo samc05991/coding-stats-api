@@ -323,10 +323,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _views_my_stats_my_stats_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/my-stats/my-stats.component */ "./src/app/views/my-stats/my-stats.component.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _views_leaderboard_leaderboard_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/leaderboard/leaderboard.component */ "./src/app/views/leaderboard/leaderboard.component.ts");
+/* harmony import */ var _views_team_stats_team_stats_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/team-stats/team-stats.component */ "./src/app/views/team-stats/team-stats.component.ts");
 
 
 
-var routes = [];
+
+
+
+
+var routes = [
+    { path: 'home', component: _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"] },
+    { path: 'leaderboard', component: _views_leaderboard_leaderboard_component__WEBPACK_IMPORTED_MODULE_5__["LeaderboardComponent"] },
+    { path: 'team-stats', component: _views_team_stats_team_stats_component__WEBPACK_IMPORTED_MODULE_6__["TeamStatsComponent"] },
+    { path: 'my-stats', component: _views_my_stats_my_stats_component__WEBPACK_IMPORTED_MODULE_3__["MyStatsComponent"] }
+];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
@@ -350,7 +363,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"app-container\">\r\n    <div class=\"panel\">\r\n        <app-stats></app-stats>\r\n    </div>\r\n    <div class=\"info-bar\">\r\n        <app-info-bar></app-info-bar>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"app-container\">\r\n    <app-header></app-header>\r\n\r\n    <div class=\"content\">\r\n        <router-outlet></router-outlet>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -361,7 +374,7 @@ module.exports = "<div class=\"app-container\">\r\n    <div class=\"panel\">\r\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".app-container {\n  width: 100%;\n  height: 100%;\n  padding: 20px;\n  box-sizing: border-box;\n  display: grid;\n  grid-template-columns: 670px 300px; }\n  .app-container .info-bar, .app-container .panel {\n    margin: 10px;\n    border-radius: 7px;\n    background-color: white;\n    text-align: center; }\n  .app-container .panel {\n    height: 730px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxzYW1fY1xcT25lRHJpdmVcXERvY3VtZW50c1xcR2l0SHViXFxjb2Rpbmctc3RhdHMvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQVc7RUFDWCxZQUFZO0VBQ1osYUFBYTtFQUNiLHNCQUFzQjtFQUV0QixhQUFhO0VBQ2Isa0NBQWtDLEVBQUE7RUFQdEM7SUFVUSxZQUFZO0lBQ1osa0JBQWtCO0lBQ2xCLHVCQUF1QjtJQUN2QixrQkFBa0IsRUFBQTtFQWIxQjtJQWlCUSxhQUFhLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwLWNvbnRhaW5lciB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIHBhZGRpbmc6IDIwcHg7XHJcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG5cclxuICAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDY3MHB4IDMwMHB4O1xyXG5cclxuICAgIC5pbmZvLWJhciwgLnBhbmVsIHtcclxuICAgICAgICBtYXJnaW46IDEwcHg7XHJcbiAgICAgICAgYm9yZGVyLXJhZGl1czogN3B4O1xyXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG4gICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIH1cclxuXHJcbiAgICAucGFuZWwge1xyXG4gICAgICAgIGhlaWdodDogNzMwcHg7XHJcbiAgICB9XHJcbn0iXX0= */"
+module.exports = ".app-container {\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box; }\n  .app-container .content {\n    padding: 20px;\n    box-sizing: border-box; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvQzpcXFVzZXJzXFxzYW1fY1xcT25lRHJpdmVcXERvY3VtZW50c1xcR2l0SHViXFxjb2Rpbmctc3RhdHMvc3JjXFxhcHBcXGFwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQVc7RUFDWCxZQUFZO0VBQ1osc0JBQXNCLEVBQUE7RUFIMUI7SUFNUSxhQUFhO0lBQ2Isc0JBQXNCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYXBwLWNvbnRhaW5lciB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcblxyXG4gICAgLmNvbnRlbnQge1xyXG4gICAgICAgIHBhZGRpbmc6IDIwcHg7XHJcbiAgICAgICAgYm94LXNpemluZzogYm9yZGVyLWJveDtcclxuICAgIH1cclxufVxyXG4vLyBAbWVkaWEgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA0MDBweCkge1xyXG4vLyAgICAgLmFwcC1jb250YWluZXIge1xyXG4vLyAgICAgICAgIHdpZHRoOiAxMDAlO1xyXG4vLyAgICAgICAgIGhlaWdodDogMTAwJTtcclxuLy8gICAgICAgICBwYWRkaW5nOiAyMHB4O1xyXG4vLyAgICAgICAgIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XHJcbiAgICBcclxuLy8gICAgICAgICBkaXNwbGF5OiBncmlkO1xyXG4vLyAgICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogNjcwcHggMzAwcHg7XHJcbi8vICAgICB9XHJcbi8vICAgfVxyXG4gICJdfQ== */"
 
 /***/ }),
 
@@ -412,8 +425,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _stats_stats_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./stats/stats.component */ "./src/app/stats/stats.component.ts");
-/* harmony import */ var _info_bar_info_bar_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./info-bar/info-bar.component */ "./src/app/info-bar/info-bar.component.ts");
+/* harmony import */ var _components_info_bar_info_bar_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/info-bar/info-bar.component */ "./src/app/components/info-bar/info-bar.component.ts");
+/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/header/header.component */ "./src/app/components/header/header.component.ts");
+/* harmony import */ var _views_my_stats_my_stats_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/my-stats/my-stats.component */ "./src/app/views/my-stats/my-stats.component.ts");
+/* harmony import */ var _views_team_stats_team_stats_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/team-stats/team-stats.component */ "./src/app/views/team-stats/team-stats.component.ts");
+/* harmony import */ var _views_leaderboard_leaderboard_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./views/leaderboard/leaderboard.component */ "./src/app/views/leaderboard/leaderboard.component.ts");
+/* harmony import */ var _charts_pie_chart_pie_chart_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./charts/pie-chart/pie-chart.component */ "./src/app/charts/pie-chart/pie-chart.component.ts");
+/* harmony import */ var _charts_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./charts/bar-chart/bar-chart.component */ "./src/app/charts/bar-chart/bar-chart.component.ts");
+/* harmony import */ var _charts_line_chart_line_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./charts/line-chart/line-chart.component */ "./src/app/charts/line-chart/line-chart.component.ts");
+
+
+
+
+
+
 
 
 
@@ -428,8 +453,14 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _stats_stats_component__WEBPACK_IMPORTED_MODULE_5__["StatsComponent"],
-                _info_bar_info_bar_component__WEBPACK_IMPORTED_MODULE_6__["InfoBarComponent"]
+                _charts_pie_chart_pie_chart_component__WEBPACK_IMPORTED_MODULE_10__["PieChartComponent"],
+                _components_info_bar_info_bar_component__WEBPACK_IMPORTED_MODULE_5__["InfoBarComponent"],
+                _components_header_header_component__WEBPACK_IMPORTED_MODULE_6__["HeaderComponent"],
+                _views_my_stats_my_stats_component__WEBPACK_IMPORTED_MODULE_7__["MyStatsComponent"],
+                _views_team_stats_team_stats_component__WEBPACK_IMPORTED_MODULE_8__["TeamStatsComponent"],
+                _views_leaderboard_leaderboard_component__WEBPACK_IMPORTED_MODULE_9__["LeaderboardComponent"],
+                _charts_bar_chart_bar_chart_component__WEBPACK_IMPORTED_MODULE_11__["BarChartComponent"],
+                _charts_line_chart_line_chart_component__WEBPACK_IMPORTED_MODULE_12__["LineChartComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -446,10 +477,515 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/info-bar/info-bar.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/info-bar/info-bar.component.html ***!
-  \**************************************************/
+/***/ "./src/app/charts/bar-chart/bar-chart.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/charts/bar-chart/bar-chart.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"statistics-container\">\n    <div class=\"charts\">\n        <h4>Projects from Last 7 Days</h4>\n        <canvas id=\"barChart\" width=\"500\" height=\"500\"></canvas>\n        <div class=\"chart-controls\">\n            <button type=\"button\" class=\"date-control active-control\">7 days</button>\n            <button type=\"button\" class=\"date-control\">30 days</button>\n            <button type=\"button\" class=\"date-control\">90 days</button>\n            <button type=\"button\" class=\"date-control\">180 days</button>\n            <button type=\"button\" class=\"date-control\">360 days</button>\n        </div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/charts/bar-chart/bar-chart.component.scss":
+/*!***********************************************************!*\
+  !*** ./src/app/charts/bar-chart/bar-chart.component.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  margin: 0px;\n  background-color: #fbfbfa; }\nbody h3, body h4 {\n    font-family: 'Montserrat', sans-serif; }\n.statistics-container {\n  width: 500px;\n  margin: 0 auto;\n  background-color: white;\n  padding: 10px 10px 10px 10px;\n  border-radius: 8px;\n  margin-top: 20px; }\n.statistics-container h4 {\n    margin-left: 13px;\n    margin-right: 13px;\n    padding-bottom: 6px;\n    border-bottom: 4px solid #81368F; }\n.statistics-container .chart-controls {\n    margin-top: 10px;\n    margin-left: 13px;\n    margin-right: 13px;\n    border-top: 3px solid #81368F;\n    padding-top: 10px; }\n.statistics-container .chart-controls .date-control {\n      background-color: #279EA4;\n      color: #fbfbfa;\n      margin-right: 7px;\n      padding: 5px 10px 5px 10px;\n      font-size: 14px;\n      border-radius: 4px;\n      border: 0px; }\n.statistics-container .chart-controls .active-control {\n      background-color: #81368F; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2hhcnRzL2Jhci1jaGFydC9DOlxcVXNlcnNcXHNhbV9jXFxPbmVEcml2ZVxcRG9jdW1lbnRzXFxHaXRIdWJcXGNvZGluZy1zdGF0cy9zcmNcXHN0eWxlcy5zY3NzIiwic3JjL2FwcC9jaGFydHMvYmFyLWNoYXJ0L0M6XFxVc2Vyc1xcc2FtX2NcXE9uZURyaXZlXFxEb2N1bWVudHNcXEdpdEh1YlxcY29kaW5nLXN0YXRzL3NyY1xcYXBwXFxjaGFydHNcXGJhci1jaGFydFxcYmFyLWNoYXJ0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUFBO0FBT0E7RUFDSSxXQUFXO0VBQ1gseUJBSlcsRUFBQTtBQUVmO0lBS1EscUNBQXFDLEVBQUE7QUNWN0M7RUFDSSxZQUFZO0VBQ1osY0FBYztFQUNkLHVCQUF1QjtFQUN2Qiw0QkFBNEI7RUFDNUIsa0JBQWtCO0VBQ2xCLGdCQUFnQixFQUFBO0FBTnBCO0lBU1EsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixtQkFBbUI7SUFDbkIsZ0NEWlMsRUFBQTtBQ0FqQjtJQWdCUSxnQkFBZ0I7SUFDaEIsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQiw2QkRuQlM7SUNvQlQsaUJBQWlCLEVBQUE7QUFwQnpCO01BdUJZLHlCRHRCTztNQ3VCUCxjRHJCRztNQ3NCSCxpQkFBaUI7TUFDakIsMEJBQTBCO01BQzFCLGVBQWU7TUFDZixrQkFBa0I7TUFDbEIsV0FBVyxFQUFBO0FBN0J2QjtNQWlDWSx5QkRqQ0ssRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9iYXItY2hhcnQvYmFyLWNoYXJ0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuXG4kcHJpbWFyeTogIzgxMzY4RjtcbiRzZWNvbmRhcnk6ICMyNzlFQTQ7XG5cbiR3aGl0ZTogI2ZiZmJmYTtcblxuYm9keSB7XG4gICAgbWFyZ2luOiAwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJHdoaXRlO1xuICAgIFxuICAgIGgzLCBoNCB7XG4gICAgICAgIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJhdCcsIHNhbnMtc2VyaWY7XG4gICAgfVxufVxuIiwiQGltcG9ydCAnLi4vLi4vLi4vc3R5bGVzLnNjc3MnO1xyXG5cclxuLnN0YXRpc3RpY3MtY29udGFpbmVyIHtcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDEwcHggMTBweCAxMHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogOHB4O1xyXG4gICAgbWFyZ2luLXRvcDogMjBweDtcclxuXHJcbiAgICBoNCB7XHJcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDEzcHg7XHJcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxM3B4O1xyXG4gICAgICAgIHBhZGRpbmctYm90dG9tOiA2cHg7XHJcbiAgICAgICAgYm9yZGVyLWJvdHRvbTogNHB4IHNvbGlkICRwcmltYXJ5O1xyXG4gICAgfVxyXG5cclxuICAgIC5jaGFydC1jb250cm9scyB7XHJcbiAgICAgICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgICAgICBtYXJnaW4tbGVmdDogMTNweDtcclxuICAgICAgICBtYXJnaW4tcmlnaHQ6IDEzcHg7XHJcbiAgICAgICAgYm9yZGVyLXRvcDogM3B4IHNvbGlkICRwcmltYXJ5O1xyXG4gICAgICAgIHBhZGRpbmctdG9wOiAxMHB4O1xyXG5cclxuICAgICAgICAuZGF0ZS1jb250cm9sIHtcclxuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHNlY29uZGFyeTtcclxuICAgICAgICAgICAgY29sb3I6ICR3aGl0ZTtcclxuICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiA3cHg7XHJcbiAgICAgICAgICAgIHBhZGRpbmc6IDVweCAxMHB4IDVweCAxMHB4O1xyXG4gICAgICAgICAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgICAgICAgICAgYm9yZGVyOiAwcHg7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICAuYWN0aXZlLWNvbnRyb2wge1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkcHJpbWFyeTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/charts/bar-chart/bar-chart.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/charts/bar-chart/bar-chart.component.ts ***!
+  \*********************************************************/
+/*! exports provided: BarChartComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BarChartComponent", function() { return BarChartComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var BarChartComponent = /** @class */ (function () {
+    function BarChartComponent() {
+        this.barChartData = {
+            labels: ['Javascript', 'PHP', 'Vue.js', 'TypeScript'],
+            datasets: [{
+                    label: 'Dataset 1',
+                    backgroundColor: 'rgb(241, 101, 41)',
+                    data: [
+                        1, 2, 3, 4
+                    ]
+                }, {
+                    label: 'Dataset 2',
+                    backgroundColor: 'rgb(71, 74, 138)',
+                    data: [
+                        1, 2, 3, 4
+                    ]
+                }, {
+                    label: 'Dataset 3',
+                    backgroundColor: 'rgb(240, 219, 79)',
+                    data: [
+                        1, 2, 3, 4
+                    ]
+                }]
+        };
+    }
+    BarChartComponent.prototype.ngOnInit = function () {
+        // let defaultDataSet = this.getDefaultDataSet();
+        // for(let i = 0; i < this.data.length; i++) {
+        //     this.statistics.labels.push(this.data[i].name);
+        //     defaultDataSet.data.push(this.data[i].hours); 
+        //     defaultDataSet.backgroundColor.push(this.data[i].background_colour);
+        // }
+        // this.statistics.datasets.push(defaultDataSet);          
+        var chart = this.prepareChart();
+    };
+    BarChartComponent.prototype.getDefaultDataSet = function () {
+        return {
+            labels: [],
+            data: [],
+            backgroundColor: [],
+        };
+    };
+    BarChartComponent.prototype.prepareChart = function () {
+        var ctx = document.getElementById('barChart');
+        return new chart_js__WEBPACK_IMPORTED_MODULE_2___default.a(ctx, {
+            type: 'bar',
+            data: this.barChartData,
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top',
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                }
+            }
+        });
+    };
+    BarChartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-bar-chart',
+            template: __webpack_require__(/*! ./bar-chart.component.html */ "./src/app/charts/bar-chart/bar-chart.component.html"),
+            styles: [__webpack_require__(/*! ./bar-chart.component.scss */ "./src/app/charts/bar-chart/bar-chart.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], BarChartComponent);
+    return BarChartComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/charts/line-chart/line-chart.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/charts/line-chart/line-chart.component.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"statistics-container\">\n  <div class=\"charts\">\n      <h4>Programming Languages Over Time</h4>\n      <canvas id=\"lineChart\" width=\"500\" height=\"500\"></canvas>\n      <div class=\"chart-controls\">\n        <button type=\"button\" class=\"date-control active-control\">7 days</button>\n        <button type=\"button\" class=\"date-control\">30 days</button>\n        <button type=\"button\" class=\"date-control\">90 days</button>\n        <button type=\"button\" class=\"date-control\">180 days</button>\n        <button type=\"button\" class=\"date-control\">360 days</button>\n      </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/charts/line-chart/line-chart.component.scss":
+/*!*************************************************************!*\
+  !*** ./src/app/charts/line-chart/line-chart.component.scss ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  margin: 0px;\n  background-color: #fbfbfa; }\nbody h3, body h4 {\n    font-family: 'Montserrat', sans-serif; }\n.statistics-container {\n  width: 500px;\n  margin: 0 auto;\n  background-color: white;\n  padding: 10px 10px 10px 10px;\n  border-radius: 8px;\n  margin-top: 20px; }\n.statistics-container h4 {\n    margin-left: 13px;\n    margin-right: 13px;\n    padding-bottom: 6px;\n    border-bottom: 4px solid #81368F; }\n.statistics-container .chart-controls {\n    margin-top: 10px;\n    margin-left: 13px;\n    margin-right: 13px;\n    border-top: 3px solid #81368F;\n    padding-top: 10px; }\n.statistics-container .chart-controls .date-control {\n      background-color: #279EA4;\n      color: #fbfbfa;\n      margin-right: 7px;\n      padding: 5px 10px 5px 10px;\n      font-size: 14px;\n      border-radius: 4px;\n      border: 0px; }\n.statistics-container .chart-controls .active-control {\n      background-color: #81368F; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2hhcnRzL2xpbmUtY2hhcnQvQzpcXFVzZXJzXFxzYW1fY1xcT25lRHJpdmVcXERvY3VtZW50c1xcR2l0SHViXFxjb2Rpbmctc3RhdHMvc3JjXFxzdHlsZXMuc2NzcyIsInNyYy9hcHAvY2hhcnRzL2xpbmUtY2hhcnQvQzpcXFVzZXJzXFxzYW1fY1xcT25lRHJpdmVcXERvY3VtZW50c1xcR2l0SHViXFxjb2Rpbmctc3RhdHMvc3JjXFxhcHBcXGNoYXJ0c1xcbGluZS1jaGFydFxcbGluZS1jaGFydC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw4RUFBQTtBQU9BO0VBQ0ksV0FBVztFQUNYLHlCQUpXLEVBQUE7QUFFZjtJQUtRLHFDQUFxQyxFQUFBO0FDVjdDO0VBQ0ksWUFBWTtFQUNaLGNBQWM7RUFDZCx1QkFBdUI7RUFDdkIsNEJBQTRCO0VBQzVCLGtCQUFrQjtFQUNsQixnQkFBZ0IsRUFBQTtBQU5wQjtJQVNRLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsbUJBQW1CO0lBQ25CLGdDRFpTLEVBQUE7QUNBakI7SUFnQlEsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtJQUNqQixrQkFBa0I7SUFDbEIsNkJEbkJTO0lDb0JULGlCQUFpQixFQUFBO0FBcEJ6QjtNQXVCWSx5QkR0Qk87TUN1QlAsY0RyQkc7TUNzQkgsaUJBQWlCO01BQ2pCLDBCQUEwQjtNQUMxQixlQUFlO01BQ2Ysa0JBQWtCO01BQ2xCLFdBQVcsRUFBQTtBQTdCdkI7TUFpQ1kseUJEakNLLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9jaGFydHMvbGluZS1jaGFydC9saW5lLWNoYXJ0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuXG4kcHJpbWFyeTogIzgxMzY4RjtcbiRzZWNvbmRhcnk6ICMyNzlFQTQ7XG5cbiR3aGl0ZTogI2ZiZmJmYTtcblxuYm9keSB7XG4gICAgbWFyZ2luOiAwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJHdoaXRlO1xuICAgIFxuICAgIGgzLCBoNCB7XG4gICAgICAgIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJhdCcsIHNhbnMtc2VyaWY7XG4gICAgfVxufVxuIiwiQGltcG9ydCAnLi4vLi4vLi4vc3R5bGVzLnNjc3MnO1xyXG5cclxuLnN0YXRpc3RpY3MtY29udGFpbmVyIHtcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDEwcHggMTBweCAxMHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogOHB4O1xyXG4gICAgbWFyZ2luLXRvcDogMjBweDtcclxuXHJcbiAgICBoNCB7XHJcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDEzcHg7XHJcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxM3B4O1xyXG4gICAgICAgIHBhZGRpbmctYm90dG9tOiA2cHg7XHJcbiAgICAgICAgYm9yZGVyLWJvdHRvbTogNHB4IHNvbGlkICRwcmltYXJ5O1xyXG4gICAgfVxyXG5cclxuICAgIC5jaGFydC1jb250cm9scyB7XHJcbiAgICAgICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgICAgICBtYXJnaW4tbGVmdDogMTNweDtcclxuICAgICAgICBtYXJnaW4tcmlnaHQ6IDEzcHg7XHJcbiAgICAgICAgYm9yZGVyLXRvcDogM3B4IHNvbGlkICRwcmltYXJ5O1xyXG4gICAgICAgIHBhZGRpbmctdG9wOiAxMHB4O1xyXG5cclxuICAgICAgICAuZGF0ZS1jb250cm9sIHtcclxuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHNlY29uZGFyeTtcclxuICAgICAgICAgICAgY29sb3I6ICR3aGl0ZTtcclxuICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiA3cHg7XHJcbiAgICAgICAgICAgIHBhZGRpbmc6IDVweCAxMHB4IDVweCAxMHB4O1xyXG4gICAgICAgICAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgICAgICAgICAgYm9yZGVyOiAwcHg7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICAuYWN0aXZlLWNvbnRyb2wge1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkcHJpbWFyeTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/charts/line-chart/line-chart.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/charts/line-chart/line-chart.component.ts ***!
+  \***********************************************************/
+/*! exports provided: LineChartComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LineChartComponent", function() { return LineChartComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var LineChartComponent = /** @class */ (function () {
+    function LineChartComponent() {
+        this.statistics = {
+            labels: [],
+            datasets: [],
+            backgroundColor: [],
+        };
+        this.data = [
+            {
+                digital: "209:55",
+                hours: 209,
+                minutes: 55,
+                name: "JavaScript",
+                percent: 28.4,
+                text: "209 hrs 55 mins",
+                total_seconds: 755742.289462,
+                background_colour: 'rgb(240, 219, 79)'
+            },
+            {
+                digital: "178:38",
+                hours: 178,
+                minutes: 38,
+                name: "PHP",
+                percent: 24.17,
+                text: "178 hrs 38 mins",
+                total_seconds: 643108.863906,
+                background_colour: 'rgb(71, 74, 138)'
+            },
+            {
+                digital: "131:31",
+                hours: 131,
+                minutes: 31,
+                name: "Vue.js",
+                percent: 17.79,
+                text: "131 hrs 31 mins",
+                total_seconds: 473518.149795,
+                background_colour: 'rgb(65, 184, 131)'
+            },
+            {
+                digital: "89:55",
+                hours: 89,
+                minutes: 55,
+                name: "HTML",
+                percent: 12.16,
+                text: "89 hrs 55 mins",
+                total_seconds: 323713.054958,
+                background_colour: 'rgb(241, 101, 41)'
+            },
+            {
+                digital: "70:39",
+                hours: 70,
+                minutes: 39,
+                name: "TypeScript",
+                percent: 9.56,
+                text: "70 hrs 39 mins",
+                total_seconds: 254391.478872,
+                background_colour: 'rgb(0, 122, 204)'
+            },
+        ];
+    }
+    LineChartComponent.prototype.ngOnInit = function () {
+        var defaultDataSet = this.getDefaultDataSet();
+        for (var i = 0; i < this.data.length; i++) {
+            this.statistics.labels.push(this.data[i].name);
+            defaultDataSet.data.push(this.data[i].hours);
+            defaultDataSet.backgroundColor.push(this.data[i].background_colour);
+        }
+        this.statistics.datasets.push(defaultDataSet);
+        var chart = this.prepareChart();
+    };
+    LineChartComponent.prototype.getDefaultDataSet = function () {
+        return {
+            labels: [],
+            data: [],
+            backgroundColor: [],
+        };
+    };
+    LineChartComponent.prototype.prepareChart = function () {
+        var ctx = document.getElementById('lineChart');
+        return new chart_js__WEBPACK_IMPORTED_MODULE_2___default.a(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                        label: 'My First dataset',
+                        backgroundColor: 'rgb(241, 101, 41)',
+                        borderColor: 'rgb(241, 101, 41)',
+                        data: [
+                            2, 4, 8, 7, 11, 16, 12
+                        ],
+                        fill: false,
+                    }, {
+                        label: 'My Second dataset',
+                        fill: false,
+                        backgroundColor: 'rgb(0, 122, 204)',
+                        borderColor: 'rgb(0, 122, 204)',
+                        data: [
+                            1, 4, 7, 3, 2, 6, 6
+                        ],
+                    }]
+            },
+            options: {
+                responsive: false,
+                title: {
+                    display: true,
+                    text: 'Chart.js Line Chart'
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Month'
+                            }
+                        }],
+                    yAxes: [{
+                            display: true,
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Value'
+                            }
+                        }]
+                }
+            }
+        });
+    };
+    LineChartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-line-chart',
+            template: __webpack_require__(/*! ./line-chart.component.html */ "./src/app/charts/line-chart/line-chart.component.html"),
+            styles: [__webpack_require__(/*! ./line-chart.component.scss */ "./src/app/charts/line-chart/line-chart.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], LineChartComponent);
+    return LineChartComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/charts/pie-chart/pie-chart.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/charts/pie-chart/pie-chart.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"statistics-container\">\n  <div class=\"charts\">\n      <h4>Top 5 Languages</h4>\n      <canvas id=\"myChart\" width=\"500\" height=\"500\"></canvas>\n      <div class=\"chart-controls\">\n        <button type=\"button\" class=\"date-control active-control\">7 days</button>\n        <button type=\"button\" class=\"date-control\">30 days</button>\n        <button type=\"button\" class=\"date-control\">90 days</button>\n        <button type=\"button\" class=\"date-control\">180 days</button>\n        <button type=\"button\" class=\"date-control\">360 days</button>\n      </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/charts/pie-chart/pie-chart.component.scss":
+/*!***********************************************************!*\
+  !*** ./src/app/charts/pie-chart/pie-chart.component.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  margin: 0px;\n  background-color: #fbfbfa; }\nbody h3, body h4 {\n    font-family: 'Montserrat', sans-serif; }\n.statistics-container {\n  width: 500px;\n  margin: 0 auto;\n  background-color: white;\n  padding: 10px 10px 10px 10px;\n  border-radius: 8px;\n  margin-top: 20px; }\n.statistics-container h4 {\n    margin-left: 13px;\n    margin-right: 13px;\n    padding-bottom: 6px;\n    border-bottom: 4px solid #81368F; }\n.statistics-container .chart-controls {\n    margin-top: 10px;\n    margin-left: 13px;\n    margin-right: 13px;\n    border-top: 3px solid #81368F;\n    padding-top: 10px; }\n.statistics-container .chart-controls .date-control {\n      background-color: #279EA4;\n      color: #fbfbfa;\n      margin-right: 7px;\n      padding: 5px 10px 5px 10px;\n      font-size: 14px;\n      border-radius: 4px;\n      border: 0px; }\n.statistics-container .chart-controls .active-control {\n      background-color: #81368F; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2hhcnRzL3BpZS1jaGFydC9DOlxcVXNlcnNcXHNhbV9jXFxPbmVEcml2ZVxcRG9jdW1lbnRzXFxHaXRIdWJcXGNvZGluZy1zdGF0cy9zcmNcXHN0eWxlcy5zY3NzIiwic3JjL2FwcC9jaGFydHMvcGllLWNoYXJ0L0M6XFxVc2Vyc1xcc2FtX2NcXE9uZURyaXZlXFxEb2N1bWVudHNcXEdpdEh1YlxcY29kaW5nLXN0YXRzL3NyY1xcYXBwXFxjaGFydHNcXHBpZS1jaGFydFxccGllLWNoYXJ0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUFBO0FBT0E7RUFDSSxXQUFXO0VBQ1gseUJBSlcsRUFBQTtBQUVmO0lBS1EscUNBQXFDLEVBQUE7QUNWN0M7RUFDSSxZQUFZO0VBQ1osY0FBYztFQUNkLHVCQUF1QjtFQUN2Qiw0QkFBNEI7RUFDNUIsa0JBQWtCO0VBQ2xCLGdCQUFnQixFQUFBO0FBTnBCO0lBU1EsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixtQkFBbUI7SUFDbkIsZ0NEWlMsRUFBQTtBQ0FqQjtJQWdCUSxnQkFBZ0I7SUFDaEIsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQiw2QkRuQlM7SUNvQlQsaUJBQWlCLEVBQUE7QUFwQnpCO01BdUJZLHlCRHRCTztNQ3VCUCxjRHJCRztNQ3NCSCxpQkFBaUI7TUFDakIsMEJBQTBCO01BQzFCLGVBQWU7TUFDZixrQkFBa0I7TUFDbEIsV0FBVyxFQUFBO0FBN0J2QjtNQWlDWSx5QkRqQ0ssRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9waWUtY2hhcnQvcGllLWNoYXJ0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuXG4kcHJpbWFyeTogIzgxMzY4RjtcbiRzZWNvbmRhcnk6ICMyNzlFQTQ7XG5cbiR3aGl0ZTogI2ZiZmJmYTtcblxuYm9keSB7XG4gICAgbWFyZ2luOiAwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogJHdoaXRlO1xuICAgIFxuICAgIGgzLCBoNCB7XG4gICAgICAgIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJhdCcsIHNhbnMtc2VyaWY7XG4gICAgfVxufVxuIiwiQGltcG9ydCAnLi4vLi4vLi4vc3R5bGVzLnNjc3MnO1xyXG5cclxuLnN0YXRpc3RpY3MtY29udGFpbmVyIHtcclxuICAgIHdpZHRoOiA1MDBweDtcclxuICAgIG1hcmdpbjogMCBhdXRvO1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XHJcbiAgICBwYWRkaW5nOiAxMHB4IDEwcHggMTBweCAxMHB4O1xyXG4gICAgYm9yZGVyLXJhZGl1czogOHB4O1xyXG4gICAgbWFyZ2luLXRvcDogMjBweDtcclxuXHJcbiAgICBoNCB7XHJcbiAgICAgICAgbWFyZ2luLWxlZnQ6IDEzcHg7XHJcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxM3B4O1xyXG4gICAgICAgIHBhZGRpbmctYm90dG9tOiA2cHg7XHJcbiAgICAgICAgYm9yZGVyLWJvdHRvbTogNHB4IHNvbGlkICRwcmltYXJ5O1xyXG4gICAgfVxyXG5cclxuICAgIC5jaGFydC1jb250cm9scyB7XHJcbiAgICAgICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgICAgICBtYXJnaW4tbGVmdDogMTNweDtcclxuICAgICAgICBtYXJnaW4tcmlnaHQ6IDEzcHg7XHJcbiAgICAgICAgYm9yZGVyLXRvcDogM3B4IHNvbGlkICRwcmltYXJ5O1xyXG4gICAgICAgIHBhZGRpbmctdG9wOiAxMHB4O1xyXG5cclxuICAgICAgICAuZGF0ZS1jb250cm9sIHtcclxuICAgICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogJHNlY29uZGFyeTtcclxuICAgICAgICAgICAgY29sb3I6ICR3aGl0ZTtcclxuICAgICAgICAgICAgbWFyZ2luLXJpZ2h0OiA3cHg7XHJcbiAgICAgICAgICAgIHBhZGRpbmc6IDVweCAxMHB4IDVweCAxMHB4O1xyXG4gICAgICAgICAgICBmb250LXNpemU6IDE0cHg7XHJcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcclxuICAgICAgICAgICAgYm9yZGVyOiAwcHg7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICAuYWN0aXZlLWNvbnRyb2wge1xyXG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkcHJpbWFyeTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/charts/pie-chart/pie-chart.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/charts/pie-chart/pie-chart.component.ts ***!
+  \*********************************************************/
+/*! exports provided: PieChartComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PieChartComponent", function() { return PieChartComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
+/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var PieChartComponent = /** @class */ (function () {
+    function PieChartComponent() {
+        this.statistics = {
+            labels: [],
+            datasets: [],
+            backgroundColor: [],
+        };
+        this.data = [
+            {
+                digital: "209:55",
+                hours: 209,
+                minutes: 55,
+                name: "JavaScript",
+                percent: 28.4,
+                text: "209 hrs 55 mins",
+                total_seconds: 755742.289462,
+                background_colour: 'rgb(240, 219, 79)'
+            },
+            {
+                digital: "178:38",
+                hours: 178,
+                minutes: 38,
+                name: "PHP",
+                percent: 24.17,
+                text: "178 hrs 38 mins",
+                total_seconds: 643108.863906,
+                background_colour: 'rgb(71, 74, 138)'
+            },
+            {
+                digital: "131:31",
+                hours: 131,
+                minutes: 31,
+                name: "Vue.js",
+                percent: 17.79,
+                text: "131 hrs 31 mins",
+                total_seconds: 473518.149795,
+                background_colour: 'rgb(65, 184, 131)'
+            },
+            {
+                digital: "89:55",
+                hours: 89,
+                minutes: 55,
+                name: "HTML",
+                percent: 12.16,
+                text: "89 hrs 55 mins",
+                total_seconds: 323713.054958,
+                background_colour: 'rgb(241, 101, 41)'
+            },
+            {
+                digital: "70:39",
+                hours: 70,
+                minutes: 39,
+                name: "TypeScript",
+                percent: 9.56,
+                text: "70 hrs 39 mins",
+                total_seconds: 254391.478872,
+                background_colour: 'rgb(0, 122, 204)'
+            },
+        ];
+    }
+    PieChartComponent.prototype.ngOnInit = function () {
+        var defaultDataSet = this.getDefaultDataSet();
+        for (var i = 0; i < this.data.length; i++) {
+            this.statistics.labels.push(this.data[i].name);
+            defaultDataSet.data.push(this.data[i].hours);
+            defaultDataSet.backgroundColor.push(this.data[i].background_colour);
+        }
+        this.statistics.datasets.push(defaultDataSet);
+        var chart = this.prepareChart();
+    };
+    PieChartComponent.prototype.getDefaultDataSet = function () {
+        return {
+            labels: [],
+            data: [],
+            backgroundColor: [],
+        };
+    };
+    PieChartComponent.prototype.prepareChart = function () {
+        var ctx = document.getElementById('myChart');
+        return new chart_js__WEBPACK_IMPORTED_MODULE_2___default.a(ctx, {
+            type: 'pie',
+            data: this.statistics,
+            options: {
+                responsive: true,
+                legend: {
+                    position: 'top',
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                }
+            }
+        });
+    };
+    PieChartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-pie-chart',
+            template: __webpack_require__(/*! ./pie-chart.component.html */ "./src/app/charts/pie-chart/pie-chart.component.html"),
+            styles: [__webpack_require__(/*! ./pie-chart.component.scss */ "./src/app/charts/pie-chart/pie-chart.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], PieChartComponent);
+    return PieChartComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/header/header.component.html":
+/*!*********************************************************!*\
+  !*** ./src/app/components/header/header.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"header-container\">\n  <div class=\"header-title\">\n    <h3>Title</h3>\n  </div>\n\n  <div class=\"header-navigation\">\n    <div class=\"header-navigation-item\">\n      <!-- <a routerLink=\"/user/bob\" routerLinkActive=\"active-link\">\n        <h3>My Stats</h3>\n      </a>\n      <a routerLink=\"/user/bob\" routerLinkActive=\"active-link\">\n        <h3>Team Stats</h3>\n      </a>\n      <a routerLink=\"/user/bob\" routerLinkActive=\"active-link\">\n        <h3>Leaderboard</h3>\n      </a> -->\n      <h3 routerLink=\"/my-stats\" routerLinkActive=\"active-link\">My Stats</h3>\n      <h3 routerLink=\"/team-stats\" routerLinkActive=\"active-link\">Team Stats</h3>\n      <h3 routerLink=\"/leaderboard\" routerLinkActive=\"active-link\">Leaderboard</h3>\n    </div>\n  </div>\n\n  <div class=\"header-user\">\n    <h3>User Name</h3>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/components/header/header.component.scss":
+/*!*********************************************************!*\
+  !*** ./src/app/components/header/header.component.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n  margin: 0px;\n  background-color: #fbfbfa; }\nbody h3, body h4 {\n    font-family: 'Montserrat', sans-serif; }\n.header-container {\n  width: 100%;\n  height: 57px;\n  background-color: #279EA4;\n  color: #fbfbfa;\n  display: grid;\n  grid-template-columns: auto auto auto; }\n.header-container .header-navigation {\n    margin: 0 auto; }\n.header-container .header-navigation .header-navigation-item {\n      display: -webkit-box;\n      display: flex; }\n.header-container .header-navigation .active-link {\n      border-bottom: 5px solid #81368F; }\n.header-container .header-user {\n    text-align: right; }\n.header-container h3 {\n    padding: 12px;\n    margin: 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9oZWFkZXIvQzpcXFVzZXJzXFxzYW1fY1xcT25lRHJpdmVcXERvY3VtZW50c1xcR2l0SHViXFxjb2Rpbmctc3RhdHMvc3JjXFxzdHlsZXMuc2NzcyIsInNyYy9hcHAvY29tcG9uZW50cy9oZWFkZXIvQzpcXFVzZXJzXFxzYW1fY1xcT25lRHJpdmVcXERvY3VtZW50c1xcR2l0SHViXFxjb2Rpbmctc3RhdHMvc3JjXFxhcHBcXGNvbXBvbmVudHNcXGhlYWRlclxcaGVhZGVyLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUFBO0FBT0E7RUFDSSxXQUFXO0VBQ1gseUJBSlcsRUFBQTtBQUVmO0lBS1EscUNBQXFDLEVBQUE7QUNWN0M7RUFDSSxXQUFXO0VBQ1gsWUFBWTtFQUNaLHlCREZlO0VDR2YsY0REVztFQ0VYLGFBQWE7RUFDYixxQ0FBcUMsRUFBQTtBQU56QztJQWlCUSxjQUFjLEVBQUE7QUFqQnRCO01Bb0JZLG9CQUFhO01BQWIsYUFBYSxFQUFBO0FBcEJ6QjtNQXdCWSxnQ0R4QkssRUFBQTtBQ0FqQjtJQTZCUSxpQkFBaUIsRUFBQTtBQTdCekI7SUFpQ1EsYUFBYTtJQUNiLFdBQVcsRUFBQSIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cblxuJHByaW1hcnk6ICM4MTM2OEY7XG4kc2Vjb25kYXJ5OiAjMjc5RUE0O1xuXG4kd2hpdGU6ICNmYmZiZmE7XG5cbmJvZHkge1xuICAgIG1hcmdpbjogMHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICR3aGl0ZTtcbiAgICBcbiAgICBoMywgaDQge1xuICAgICAgICBmb250LWZhbWlseTogJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmO1xuICAgIH1cbn1cbiIsIkBpbXBvcnQgJy4uLy4uLy4uL3N0eWxlcy5zY3NzJztcclxuXHJcbi5oZWFkZXItY29udGFpbmVyIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiA1N3B4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogJHNlY29uZGFyeTtcclxuICAgIGNvbG9yOiAkd2hpdGU7XHJcbiAgICBkaXNwbGF5OiBncmlkO1xyXG4gICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiBhdXRvIGF1dG8gYXV0bztcclxuXHJcbiAgICAvLyAuaGVhZGVyLXRpdGxlLCAuaGVhZGVyLW5hdmlnYXRpb24sIC5oZWFkZXItdXNlciB7XHJcblxyXG4gICAgLy8gfVxyXG5cclxuICAgIC8vIC5oZWFkZXItdGl0bGUge1xyXG5cclxuICAgIC8vIH1cclxuXHJcbiAgICAuaGVhZGVyLW5hdmlnYXRpb24ge1xyXG4gICAgICAgIG1hcmdpbjogMCBhdXRvO1xyXG5cclxuICAgICAgICAuaGVhZGVyLW5hdmlnYXRpb24taXRlbSB7XHJcbiAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICAuYWN0aXZlLWxpbmsge1xyXG4gICAgICAgICAgICBib3JkZXItYm90dG9tOiA1cHggc29saWQgJHByaW1hcnk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC5oZWFkZXItdXNlciB7XHJcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XHJcbiAgICB9XHJcblxyXG4gICAgaDMge1xyXG4gICAgICAgIHBhZGRpbmc6IDEycHg7XHJcbiAgICAgICAgbWFyZ2luOiA1cHg7XHJcbiAgICB9XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/header/header.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/components/header/header.component.ts ***!
+  \*******************************************************/
+/*! exports provided: HeaderComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderComponent", function() { return HeaderComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var HeaderComponent = /** @class */ (function () {
+    function HeaderComponent() {
+    }
+    HeaderComponent.prototype.ngOnInit = function () {
+    };
+    HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-header',
+            template: __webpack_require__(/*! ./header.component.html */ "./src/app/components/header/header.component.html"),
+            styles: [__webpack_require__(/*! ./header.component.scss */ "./src/app/components/header/header.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], HeaderComponent);
+    return HeaderComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/info-bar/info-bar.component.html":
+/*!*************************************************************!*\
+  !*** ./src/app/components/info-bar/info-bar.component.html ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -457,21 +993,21 @@ module.exports = "<div class=\"info-bar-container\">\n  <h4>Other Languages</h4>
 
 /***/ }),
 
-/***/ "./src/app/info-bar/info-bar.component.scss":
-/*!**************************************************!*\
-  !*** ./src/app/info-bar/info-bar.component.scss ***!
-  \**************************************************/
+/***/ "./src/app/components/info-bar/info-bar.component.scss":
+/*!*************************************************************!*\
+  !*** ./src/app/components/info-bar/info-bar.component.scss ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2luZm8tYmFyL2luZm8tYmFyLmNvbXBvbmVudC5zY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvaW5mby1iYXIvaW5mby1iYXIuY29tcG9uZW50LnNjc3MifQ== */"
 
 /***/ }),
 
-/***/ "./src/app/info-bar/info-bar.component.ts":
-/*!************************************************!*\
-  !*** ./src/app/info-bar/info-bar.component.ts ***!
-  \************************************************/
+/***/ "./src/app/components/info-bar/info-bar.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/components/info-bar/info-bar.component.ts ***!
+  \***********************************************************/
 /*! exports provided: InfoBarComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -537,8 +1073,8 @@ var InfoBarComponent = /** @class */ (function () {
     InfoBarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-info-bar',
-            template: __webpack_require__(/*! ./info-bar.component.html */ "./src/app/info-bar/info-bar.component.html"),
-            styles: [__webpack_require__(/*! ./info-bar.component.scss */ "./src/app/info-bar/info-bar.component.scss")]
+            template: __webpack_require__(/*! ./info-bar.component.html */ "./src/app/components/info-bar/info-bar.component.html"),
+            styles: [__webpack_require__(/*! ./info-bar.component.scss */ "./src/app/components/info-bar/info-bar.component.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
     ], InfoBarComponent);
@@ -549,148 +1085,168 @@ var InfoBarComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/app/stats/stats.component.html":
-/*!********************************************!*\
-  !*** ./src/app/stats/stats.component.html ***!
-  \********************************************/
+/***/ "./src/app/views/leaderboard/leaderboard.component.html":
+/*!**************************************************************!*\
+  !*** ./src/app/views/leaderboard/leaderboard.component.html ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"statistics-container\">\n  <h4>Top 5 Languages</h4>\n  <div class=\"charts\">\n      <canvas id=\"myChart\" width=\"500\" height=\"500\"></canvas>\n  </div>\n</div>"
+module.exports = "<p>\n  leaderboard works!\n</p>\n"
 
 /***/ }),
 
-/***/ "./src/app/stats/stats.component.scss":
-/*!********************************************!*\
-  !*** ./src/app/stats/stats.component.scss ***!
-  \********************************************/
+/***/ "./src/app/views/leaderboard/leaderboard.component.scss":
+/*!**************************************************************!*\
+  !*** ./src/app/views/leaderboard/leaderboard.component.scss ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3N0YXRzL3N0YXRzLmNvbXBvbmVudC5zY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ZpZXdzL2xlYWRlcmJvYXJkL2xlYWRlcmJvYXJkLmNvbXBvbmVudC5zY3NzIn0= */"
 
 /***/ }),
 
-/***/ "./src/app/stats/stats.component.ts":
-/*!******************************************!*\
-  !*** ./src/app/stats/stats.component.ts ***!
-  \******************************************/
-/*! exports provided: StatsComponent */
+/***/ "./src/app/views/leaderboard/leaderboard.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/views/leaderboard/leaderboard.component.ts ***!
+  \************************************************************/
+/*! exports provided: LeaderboardComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StatsComponent", function() { return StatsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LeaderboardComponent", function() { return LeaderboardComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! chart.js */ "./node_modules/chart.js/dist/Chart.js");
-/* harmony import */ var chart_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(chart_js__WEBPACK_IMPORTED_MODULE_2__);
 
 
-
-var StatsComponent = /** @class */ (function () {
-    function StatsComponent() {
-        this.statistics = {
-            labels: [],
-            datasets: [],
-            backgroundColor: [],
-        };
-        this.data = [
-            {
-                digital: "209:55",
-                hours: 209,
-                minutes: 55,
-                name: "JavaScript",
-                percent: 28.4,
-                text: "209 hrs 55 mins",
-                total_seconds: 755742.289462,
-                background_colour: 'rgb(240, 219, 79)'
-            },
-            {
-                digital: "178:38",
-                hours: 178,
-                minutes: 38,
-                name: "PHP",
-                percent: 24.17,
-                text: "178 hrs 38 mins",
-                total_seconds: 643108.863906,
-                background_colour: 'rgb(71, 74, 138)'
-            },
-            {
-                digital: "131:31",
-                hours: 131,
-                minutes: 31,
-                name: "Vue.js",
-                percent: 17.79,
-                text: "131 hrs 31 mins",
-                total_seconds: 473518.149795,
-                background_colour: 'rgb(65, 184, 131)'
-            },
-            {
-                digital: "89:55",
-                hours: 89,
-                minutes: 55,
-                name: "HTML",
-                percent: 12.16,
-                text: "89 hrs 55 mins",
-                total_seconds: 323713.054958,
-                background_colour: 'rgb(241, 101, 41)'
-            },
-            {
-                digital: "70:39",
-                hours: 70,
-                minutes: 39,
-                name: "TypeScript",
-                percent: 9.56,
-                text: "70 hrs 39 mins",
-                total_seconds: 254391.478872,
-                background_colour: 'rgb(0, 122, 204)'
-            },
-        ];
+var LeaderboardComponent = /** @class */ (function () {
+    function LeaderboardComponent() {
     }
-    StatsComponent.prototype.ngOnInit = function () {
-        var defaultDataSet = this.getDefaultDataSet();
-        for (var i = 0; i < this.data.length; i++) {
-            this.statistics.labels.push(this.data[i].name);
-            defaultDataSet.data.push(this.data[i].hours);
-            defaultDataSet.backgroundColor.push(this.data[i].background_colour);
-        }
-        this.statistics.datasets.push(defaultDataSet);
-        var chart = this.prepareChart();
+    LeaderboardComponent.prototype.ngOnInit = function () {
     };
-    StatsComponent.prototype.getDefaultDataSet = function () {
-        return {
-            labels: [],
-            data: [],
-            backgroundColor: [],
-        };
-    };
-    StatsComponent.prototype.prepareChart = function () {
-        var ctx = document.getElementById('myChart');
-        return new chart_js__WEBPACK_IMPORTED_MODULE_2___default.a(ctx, {
-            type: 'pie',
-            data: this.statistics,
-            options: {
-                responsive: true,
-                legend: {
-                    position: 'top',
-                },
-                animation: {
-                    animateScale: true,
-                    animateRotate: true
-                }
-            }
-        });
-    };
-    StatsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    LeaderboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-stats',
-            template: __webpack_require__(/*! ./stats.component.html */ "./src/app/stats/stats.component.html"),
-            styles: [__webpack_require__(/*! ./stats.component.scss */ "./src/app/stats/stats.component.scss")]
+            selector: 'app-leaderboard',
+            template: __webpack_require__(/*! ./leaderboard.component.html */ "./src/app/views/leaderboard/leaderboard.component.html"),
+            styles: [__webpack_require__(/*! ./leaderboard.component.scss */ "./src/app/views/leaderboard/leaderboard.component.scss")]
         }),
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], StatsComponent);
-    return StatsComponent;
+    ], LeaderboardComponent);
+    return LeaderboardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/my-stats/my-stats.component.html":
+/*!********************************************************!*\
+  !*** ./src/app/views/my-stats/my-stats.component.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"my-stats-container\">\n  <app-pie-chart></app-pie-chart>\n  <app-bar-chart></app-bar-chart>\n  <app-line-chart></app-line-chart>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/views/my-stats/my-stats.component.scss":
+/*!********************************************************!*\
+  !*** ./src/app/views/my-stats/my-stats.component.scss ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".my-stats-container {\n  display: grid;\n  grid-template-columns: auto auto auto; }\n\n@media screen and (max-width: 1581px) {\n  .my-stats-container {\n    grid-template-columns: auto auto; } }\n\n@media screen and (max-width: 1050px) {\n  .my-stats-container {\n    grid-template-columns: auto; } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdmlld3MvbXktc3RhdHMvQzpcXFVzZXJzXFxzYW1fY1xcT25lRHJpdmVcXERvY3VtZW50c1xcR2l0SHViXFxjb2Rpbmctc3RhdHMvc3JjXFxhcHBcXHZpZXdzXFxteS1zdGF0c1xcbXktc3RhdHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxhQUFhO0VBQ2IscUNBQXFDLEVBQUE7O0FBR3pDO0VBQ0k7SUFDSSxnQ0FBZ0MsRUFBQSxFQUNuQzs7QUFHTDtFQUNJO0lBQ0ksMkJBQTJCLEVBQUEsRUFDOUIiLCJmaWxlIjoic3JjL2FwcC92aWV3cy9teS1zdGF0cy9teS1zdGF0cy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5teS1zdGF0cy1jb250YWluZXIge1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byBhdXRvIGF1dG87XHJcbn1cclxuXHJcbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDE1ODFweCkge1xyXG4gICAgLm15LXN0YXRzLWNvbnRhaW5lciB7XHJcbiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiBhdXRvIGF1dG87XHJcbiAgICB9XHJcbn1cclxuXHJcbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDEwNTBweCkge1xyXG4gICAgLm15LXN0YXRzLWNvbnRhaW5lciB7XHJcbiAgICAgICAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiBhdXRvO1xyXG4gICAgfVxyXG59XHJcbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/views/my-stats/my-stats.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/views/my-stats/my-stats.component.ts ***!
+  \******************************************************/
+/*! exports provided: MyStatsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyStatsComponent", function() { return MyStatsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var MyStatsComponent = /** @class */ (function () {
+    function MyStatsComponent() {
+    }
+    MyStatsComponent.prototype.ngOnInit = function () {
+    };
+    MyStatsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-my-stats',
+            template: __webpack_require__(/*! ./my-stats.component.html */ "./src/app/views/my-stats/my-stats.component.html"),
+            styles: [__webpack_require__(/*! ./my-stats.component.scss */ "./src/app/views/my-stats/my-stats.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], MyStatsComponent);
+    return MyStatsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/views/team-stats/team-stats.component.html":
+/*!************************************************************!*\
+  !*** ./src/app/views/team-stats/team-stats.component.html ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  team-stats works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/views/team-stats/team-stats.component.scss":
+/*!************************************************************!*\
+  !*** ./src/app/views/team-stats/team-stats.component.scss ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ZpZXdzL3RlYW0tc3RhdHMvdGVhbS1zdGF0cy5jb21wb25lbnQuc2NzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/views/team-stats/team-stats.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/views/team-stats/team-stats.component.ts ***!
+  \**********************************************************/
+/*! exports provided: TeamStatsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeamStatsComponent", function() { return TeamStatsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var TeamStatsComponent = /** @class */ (function () {
+    function TeamStatsComponent() {
+    }
+    TeamStatsComponent.prototype.ngOnInit = function () {
+    };
+    TeamStatsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-team-stats',
+            template: __webpack_require__(/*! ./team-stats.component.html */ "./src/app/views/team-stats/team-stats.component.html"),
+            styles: [__webpack_require__(/*! ./team-stats.component.scss */ "./src/app/views/team-stats/team-stats.component.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], TeamStatsComponent);
+    return TeamStatsComponent;
 }());
 
 
