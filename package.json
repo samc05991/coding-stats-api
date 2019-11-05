@@ -14,7 +14,7 @@
     "express": "~4.16.4",
     "hbs": "^4.0.4",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.4.2",
+    "mongoose": "^5.7.5",
     "mongoose-unique-validator": "^2.0.2",
     "morgan": "~1.9.1",
     "reflect-metadata": "^0.1.12",
